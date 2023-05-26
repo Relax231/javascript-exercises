@@ -13,11 +13,16 @@ const sum = function (arr) {
 
 const multiply = function (arr) {
   let array = [...arr];
-  let result = array[0];
-  for (let i = 1; i < array.length; i++) {
-    result *= array[i];
-  }
-  return result;
+
+  return array.length
+    ? array.reduce((summe, current) => summe * current, 1)
+    : 0;
+
+  // let result = array[0];
+  // for (let i = 1; i < array.length; i++) {
+  //   result *= array[i];
+  // }
+  // return result;
 };
 
 const power = function () {};
